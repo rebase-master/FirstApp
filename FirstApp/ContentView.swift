@@ -8,14 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isTextShowing: Bool = false
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            HStack {
+                if isTextShowing {
+                    Text("Hello World")
+                        .padding()
+                        .font(.title)
+                    
+                } else {
+                    Text("     ")
+                        .padding()
+                    
+                }
+            }
+            Button(action: {
+                isTextShowing.toggle()
+            }) {
+                Text("Toggle")
+            }
         }
-        .padding()
+
     }
 }
 
