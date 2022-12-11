@@ -16,7 +16,7 @@ struct ContentView: View {
                 .foregroundColor(.accentColor)
             HStack {
                 if isTextShowing {
-                    Text("Hello World")
+                    Text("Hello World! XCode 12 Branch")
                         .padding()
                         .font(.title)
                     
